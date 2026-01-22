@@ -1,0 +1,23 @@
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 128px;
+  background-color: #ededed;
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+
+.categories h2 {
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}

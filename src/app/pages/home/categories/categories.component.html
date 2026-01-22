@@ -1,1 +1,9 @@
-<p>categories works!</p>
+<div class="categories">
+  <h2>Browse By Category</h2>
+  <div class="items">
+    <div class="item" *ngFor="let c of categories">
+      <img [src]="c.icon" [alt]="c.name" />
+      <div class="label">{{ c.name }}</div>
+    </div>
+  </div>
+</div>
