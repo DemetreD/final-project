@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-left .logo {
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-search input {
+  width: 280px;
+  padding: 8px 12px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.active {
+  font-weight: 600;
+}

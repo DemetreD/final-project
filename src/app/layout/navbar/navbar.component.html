@@ -1,14 +1,33 @@
-<nav
-  style="display: flex; gap: 16px; padding: 16px; border-bottom: 1px solid #ddd"
->
-  <a
-    routerLink="/"
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }"
-    >Home</a
-  >
-  <a routerLink="/products" routerLinkActive="active">Products</a>
-  <a routerLink="/cart" routerLinkActive="active">Cart</a>
-  <a routerLink="/checkout" routerLinkActive="active">Checkout</a>
-  <a routerLink="/login" routerLinkActive="active">Login</a>
-</nav>
+<div class="container">
+  <nav class="navbar">
+    <!-- LEFT: logo -->
+    <div class="nav-left">
+      <a routerLink="/" class="logo">cyber</a>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="nav-search">
+      <input type="text" placeholder="Search" />
+    </div>
+
+    <!-- LINKS -->
+    <div class="nav-links">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
+      <a routerLink="/blog" routerLinkActive="active">Blog</a>
+    </div>
+
+    <!-- ICONS -->
+    <div class="nav-icons">
+      <span>❤️</span>
+      <a routerLink="/cart">🛒</a>
+      <a routerLink="/login">👤</a>
+    </div>
+  </nav>
+</div>
