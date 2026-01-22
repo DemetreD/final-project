@@ -59,7 +59,9 @@
 
       <div class="actions">
         <button type="button" class="btn outline">Add to Wishlist</button>
-        <button type="button" class="btn solid">Add to Cart</button>
+        <button type="button" class="btn solid" (click)="addToCart()">
+          Add to Cart
+        </button>
       </div>
 
       <p class="desc" *ngIf="product.description">{{ product.description }}</p>

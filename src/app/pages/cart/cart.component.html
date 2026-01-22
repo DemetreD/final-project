@@ -1,1 +1,31 @@
-<p>cart works!</p>
+<h1>Cart</h1>
+<div class="cart">
+  <div *ngIf="items$ | async as items">
+    <p *ngIf="items.length === 0">Cart is empty.</p>
+
+    <div class="row" *ngFor="let item of items">
+      <img [src]="item.product.image" [alt]="item.product.title" width="70" />
+
+      <div class="info">
+        <div class="name">{{ item.product.title }}</div>
+        <div class="price">${{ item.product.price }}</div>
+      </div>
+
+      <div class="qty">
+        <button type="button" (click)="dec(item.product.id)">-</button>
+        <span>{{ item.qty }}</span>
+        <button type="button" (click)="inc(item.product.id)">+</button>
+      </div>
+
+      <button type="button" (click)="remove(item.product.id)">Remove</button>
+    </div>
+
+    <div class="summary" *ngIf="items.length">
+      <b>Total:</b> ${{ cartService.total() }}
+      <div class="actions">
+        <button type="button" (click)="clear()">Clear</button>
+        <a routerLink="/checkout">Checkout</a>
+      </div>
+    </div>
+  </div>
+</div>
