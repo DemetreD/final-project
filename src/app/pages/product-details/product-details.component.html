@@ -1,1 +1,105 @@
-<p>product-details works!</p>
+<div *ngIf="product; else notFound" class="wrap">
+  <div class="top">
+    <div class="thumbs" *ngIf="product.image?.length">
+      <!-- <button class="thumb" *ngFor="let img of product.image" type="button">
+        <img [src]="img" alt="thumb" /> -->
+
+      <button class="thumb" *ngFor="let img of product.image" type="button">
+        <img [src]="img" alt="thumb" />
+      </button>
+    </div>
+
+    <div class="main-img">
+      <img [src]="product.image" [alt]="product.title" />
+    </div>
+
+    <div class="info">
+      <h1>{{ product.title }}</h1>
+      <p class="sub">{{ product.subtitle }}</p>
+
+      <div class="price-row">
+        <span class="price">${{ product.price }}</span>
+      </div>
+
+      <div class="options">
+        <div class="opt-row" *ngIf="product.colors?.length">
+          <div class="label">Select color :</div>
+          <div class="colors">
+            <button
+              type="button"
+              class="color"
+              *ngFor="let c of product.colors"
+              [style.background]="c"
+              [class.active]="selectedColor === c"
+              (click)="setColor(c)"
+            ></button>
+          </div>
+        </div>
+
+        <div class="storages">
+          <button
+            type="button"
+            class="storage"
+            *ngFor="let s of storages"
+            [class.active]="selectedStorage === s"
+            (click)="setStorage(s)"
+          >
+            {{ s }}
+          </button>
+        </div>
+      </div>
+
+      <!-- SPECS -->
+      <div class="specs" *ngIf="product.specs?.length">
+        <div class="spec" *ngFor="let s of product.specs">
+          <div class="k">{{ s.label }}</div>
+          <div class="v">{{ s.value }}</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn outline">Add to Wishlist</button>
+        <button type="button" class="btn solid">Add to Cart</button>
+      </div>
+
+      <p class="desc" *ngIf="product.description">{{ product.description }}</p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde quidem
+        incidunt quae amet commodi maiores possimus recusandae quos sed libero
+        tempora laborum veniam, autem earum expedita temporibus porro nisi!
+        Aliquid.
+      </p>
+    </div>
+  </div>
+
+  <div class="details">
+    <h3>Details</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi sit
+      voluptatibus deserunt dolor ipsa hic harum facilis earum sed in, maiores
+      consequuntur voluptates nobis perspiciatis sunt repellat ea ipsam tempora.
+      Ipsum aliquam, tempore consequatur suscipit incidunt atque, nobis autem
+      mollitia veritatis iure consectetur cupiditate officiis placeat beatae
+      deleniti quod quaerat quo alias? Atque, voluptate corporis amet
+      voluptatibus consectetur dolore possimus! Eius accusantium libero
+      necessitatibus beatae assumenda odio ipsa? Sunt amet laborum aliquid
+      tenetur voluptates nostrum ut dicta voluptatem minima cumque unde tempora
+      eius veniam a expedita provident dignissimos, quibusdam quas.
+    </p>
+    <div class="related">
+      <h2>Related Products</h2>
+      <section class="related" *ngIf="related$ | async as related">
+        <h3>Related Products</h3>
+
+        <div class="related-grid">
+          <app-product-card *ngFor="let p of related" [product]="p">
+          </app-product-card>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<ng-template #notFound>
+  <p>Product not found.</p>
+</ng-template>

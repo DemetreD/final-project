@@ -1,0 +1,210 @@
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 90px 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.thumbs {
+  display: grid;
+  gap: 10px;
+}
+
+.thumb {
+  border: 1px solid #eee;
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.thumb img {
+  width: 100%;
+  height: 60px;
+  object-fit: contain;
+}
+
+.main-img {
+  background: #f6f6f6;
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+}
+
+.main-img img {
+  max-width: 100%;
+  max-height: 340px;
+  object-fit: contain;
+}
+
+.info h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.sub {
+  margin: 8px 0 14px;
+  opacity: 0.7;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.old {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.btn.outline {
+  background: transparent;
+}
+
+.btn.solid {
+  background: #000;
+  color: #fff;
+}
+
+.desc {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.details {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+/* options */
+.options {
+  margin: 16px 0 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.opt-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-size: 13px;
+  opacity: 0.75;
+  min-width: 90px;
+}
+
+.colors {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.color {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.color.active {
+  border-color: #000;
+}
+
+/* storage buttons */
+.storages {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.storage {
+  min-width: 86px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.storage.active {
+  border-color: #000;
+}
+
+/* specs grid */
+.specs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 14px 0 18px;
+}
+
+.spec {
+  background: #f6f6f6;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.spec .k {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.spec .v {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.related {
+  margin-top: 40px;
+}
+
+.related h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.related-grid app-product-card {
+  display: block;
+}

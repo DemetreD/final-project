@@ -5,7 +5,18 @@
     "subtitle": "128GB Deep Purple",
     "price": 900,
     "tag": "new",
-    "image": "assets/products/phone1.png"
+    "image": "assets/products/phone1.png",
+    "description": "A powerful smartphone with an advanced camera system, fast performance, and a stunning display.",
+    "colors": ["#000000", "#6a00ff", "#ff0000", "#f2c200", "#e5e5e5"],
+    "storages": ["128GB", "256GB", "512GB", "1TB"],
+    "specs": [
+    { "label": "Screen size", "value": "6.7”" },
+    { "label": "CPU", "value": "Apple A16 Bionic" },
+    { "label": "Number of cores", "value": "6" },
+    { "label": "Main camera", "value": "48-12-12 MP" },
+    { "label": "Front camera", "value": "12 MP" },
+    { "label": "Battery", "value": "4323 mAh" }
+    ]
   },
   {
     "id": 2,
@@ -13,7 +24,13 @@
     "subtitle": "Camera 6K",
     "price": 2535,
     "tag": "featured",
-    "image": "assets/products/camera.png"
+    "image": "assets/products/camera.png",
+    "specs": [
+    { "label": "Resolution", "value": "6K" },
+    { "label": "Sensor", "value": "Super 35" },
+    { "label": "Lens mount", "value": "EF" },
+    { "label": "Recording", "value": "Blackmagic RAW" }
+  ]
   },
   {
     "id": 3,
@@ -21,7 +38,15 @@
     "subtitle": "41mm Starlight Aluminium",
     "price": 399,
     "tag": "new",
-    "image": "assets/products/watch.png"
+    "image": "assets/products/watch.png",
+    "specs": [
+    { "label": "Case size", "value": "41mm" },
+    { "label": "Connectivity", "value": "GPS" },
+    { "label": "Water resistance", "value": "50m" },
+    { "label": "Battery", "value": "Up to 18 hours" }
+  ],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu ipsum luctus, euismod mi a, viverra mauris. Integer sit amet tristique dolor, et ultrices nisl."
+
   },
   {
     "id": 4,
@@ -45,7 +70,17 @@
     "subtitle": "256GB | Phantom Black",
     "price": 1799,
     "tag": "featured",
-    "image": "assets/products/phone2.png"
+    "image": "assets/products/phone2.png",
+    "colors": ["#000000", "#6a00ff", "#ff0000", "#f2c200", "#e5e5e5"],
+    "storages": ["128GB", "256GB", "512GB", "1TB"],
+    "specs": [
+    { "label": "Screen size", "value": "6.7”" },
+    { "label": "CPU", "value": "Apple A16 Bionic" },
+    { "label": "Number of cores", "value": "6" },
+    { "label": "Main camera", "value": "48-12-12 MP" },
+    { "label": "Front camera", "value": "12 MP" },
+    { "label": "Battery", "value": "4323 mAh" }
+    ]
   },
   {
     "id": 7,

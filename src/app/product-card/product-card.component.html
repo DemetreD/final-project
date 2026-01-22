@@ -1,11 +1,13 @@
 <div class="card">
-  <div class="img-wrap">
+  <!-- <div class="img-wrap"> -->
+  <a class="link" [routerLink]="['/products', product.id]">
     <img [src]="product.image" [alt]="product.title" />
-  </div>
+    <!-- </div> -->
 
-  <div class="title">{{ product.title }}</div>
-  <div class="sub">{{ product.subtitle }}</div>
-  <div class="price">${{ product.price }}</div>
+    <div class="title">{{ product.title }}</div>
+    <div class="sub">{{ product.subtitle }}</div>
+    <div class="price">${{ product.price }}</div>
+  </a>
 
   <button class="buy" type="button">Buy Now</button>
 </div>
