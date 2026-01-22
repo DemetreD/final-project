@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Apple iPhone 14 Pro Max",
+    "subtitle": "128GB Deep Purple",
+    "price": 900,
+    "tag": "new",
+    "image": "assets/products/phone1.png"
+  },
+  {
+    "id": 2,
+    "title": "Blackmagic Pocket Cinema",
+    "subtitle": "Camera 6K",
+    "price": 2535,
+    "tag": "featured",
+    "image": "assets/products/camera.png"
+  },
+  {
+    "id": 3,
+    "title": "Apple Watch Series 9 GPS",
+    "subtitle": "41mm Starlight Aluminium",
+    "price": 399,
+    "tag": "new",
+    "image": "assets/products/watch.png"
+  },
+  {
+    "id": 4,
+    "title": "AirPods Max Silver",
+    "subtitle": "Starlight Aluminium",
+    "price": 549,
+    "tag": "bestseller",
+    "image": "assets/products/headp.png"
+  },
+  {
+    "id": 5,
+    "title": "Samsung Galaxy Watch6 Classic",
+    "subtitle": "47mm Black",
+    "price": 369,
+    "tag": "bestseller",
+    "image": "assets/products/watch2.png"
+  },
+  {
+    "id": 6,
+    "title": "Galaxy Z Fold5 Unlocked",
+    "subtitle": "256GB | Phantom Black",
+    "price": 1799,
+    "tag": "featured",
+    "image": "assets/products/phone2.png"
+  },
+  {
+    "id": 7,
+    "title": "Galaxy Buds FE",
+    "subtitle": "Graphite",
+    "price": 99.99,
+    "tag": "new",
+    "image": "assets/products/buds.png"
+  },
+  {
+    "id": 8,
+    "title": "Apple iPad 9 10.2",
+    "subtitle": "64GB Wi-Fi (2021)",
+    "price": 398,
+    "tag": "bestseller",
+    "image": "assets/products/ipad.png"
+  }
+]

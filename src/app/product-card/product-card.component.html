@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="img-wrap">
+    <img [src]="product.image" [alt]="product.title" />
+  </div>
+
+  <div class="title">{{ product.title }}</div>
+  <div class="sub">{{ product.subtitle }}</div>
+  <div class="price">${{ product.price }}</div>
+
+  <button class="buy" type="button">Buy Now</button>
+</div>
