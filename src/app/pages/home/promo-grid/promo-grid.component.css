@@ -1,0 +1,115 @@
+.promo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sect {
+  display: flex;
+}
+/* 
+.card {
+  padding: 18px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+} */
+
+/* .card.big {
+  min-height: 280px;
+} */
+
+.dark {
+  background: #353535;
+  color: #fff;
+}
+
+.light {
+  background: #fff;
+  color: #111;
+}
+
+.dlight {
+  background-color: #ededed;
+}
+
+button {
+  margin-top: 12px;
+  width: fit-content;
+  padding: 10px 14px;
+  border: 1px solid #111;
+  background: transparent;
+  cursor: pointer;
+}
+
+.play {
+  display: flex;
+}
+
+.play--img,
+.airpods,
+.vp,
+.mac {
+  width: 40%;
+  margin-left: -8px;
+}
+
+.card1,
+.card2,
+.card3 {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card1--text h3 {
+  font-size: 3rem;
+}
+.card1--text p {
+  font-size: 14px;
+  color: #909090;
+}
+
+.card2--text h3 {
+  font-size: 2rem;
+  line-height: 1.2;
+  width: 1ch;
+}
+.card2--text p {
+  font-size: 1rem;
+  color: #909090;
+}
+
+.card3--text h3 {
+  font-size: 2.5rem;
+  /* width: 10ch; */
+}
+
+.card3--text p {
+  color: #909090;
+}
+
+.card4 {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  /* gap: 2rem; */
+  height: 770px;
+}
+
+.card4--text h3 {
+  font-size: 4rem;
+  width: 10ch;
+  line-height: 1;
+}
+
+.card4--text p {
+  color: #909090;
+}
+
+.card4--text {
+  margin-left: 12px;
+}
