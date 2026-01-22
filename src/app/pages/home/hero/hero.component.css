@@ -1,4 +1,38 @@
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #211c24;
   color: #fff;
+}
+
+.hero--img {
+  width: 80%;
+  margin-bottom: -7px;
+}
+
+.tag {
+  color: #909090;
+  font-size: 25px;
+}
+
+.hero--title {
+  font-size: 6rem;
+}
+
+.desc {
+  color: #909090;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.hero--btn {
+  font-size: 1rem;
+  border-radius: 6px;
+  background-color: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
 }
