@@ -1,1 +1,14 @@
-<p>navbar works!</p>
+<nav
+  style="display: flex; gap: 16px; padding: 16px; border-bottom: 1px solid #ddd"
+>
+  <a
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Home</a
+  >
+  <a routerLink="/products" routerLinkActive="active">Products</a>
+  <a routerLink="/cart" routerLinkActive="active">Cart</a>
+  <a routerLink="/checkout" routerLinkActive="active">Checkout</a>
+  <a routerLink="/login" routerLinkActive="active">Login</a>
+</nav>
