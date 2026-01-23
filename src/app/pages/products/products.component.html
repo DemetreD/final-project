@@ -68,11 +68,19 @@
         </div>
       </div>
 
-      <div class="grid">
+      <!-- <div class="grid">
         <app-product-card
           *ngFor="let p of products"
           [product]="p"
         ></app-product-card>
+      </div> -->
+
+      <div class="grid">
+        <app-product-card
+          *ngFor="let p of products; trackBy: trackByIndex"
+          [product]="p"
+        >
+        </app-product-card>
       </div>
 
       <div class="pagination">

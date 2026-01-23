@@ -33,7 +33,6 @@
 // }
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { ProductsService } from '../../services/products.service';
 import { Product } from '../../models/product';
 import { ProductCardComponent } from '../../product-card/product-card.component';
 import { ProductsService } from '../../services/product.service';
@@ -49,8 +48,19 @@ export class ProductsComponent {
   products: Product[] = [];
 
   constructor(private productsService: ProductsService) {
-    this.productsService.getAll().subscribe(items => {
-      this.products = items;
-    });
+ this.productsService.getAll().subscribe(items => {
+  const phones = items.filter(p =>
+    (p.title + ' ' + p.subtitle).toLowerCase().includes('iphone') ||
+    (p.title + ' ' + p.subtitle).toLowerCase().includes('galaxy')
+  );
+
+  const base = phones.length ? phones : items;
+
+  this.products = Array.from({ length: 6 }).flatMap(() => base);
+});
   }
+  trackByIndex(index: number) {
+    return index;
+  }
+
 }
