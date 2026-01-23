@@ -16,7 +16,12 @@ import { adminGuard } from './guards/role.guard';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'products', component: ProductsComponent },
+  // { path: 'products', component: ProductsComponent },
+  { 
+  path: 'products', 
+  loadComponent: () =>
+    import('./pages/products/products.component').then(m => m.ProductsComponent)
+  },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'cart', component: CartComponent },
   // { path: 'checkout', loadComponent: () => import('./pages/checkout/checkout.component').then(m => m.CheckoutComponent) },

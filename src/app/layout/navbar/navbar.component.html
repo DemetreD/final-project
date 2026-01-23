@@ -17,6 +17,13 @@
     <a routerLink="/about" routerLinkActive="active">About</a>
     <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
     <a routerLink="/blog" routerLinkActive="active">Blog</a>
+    <a
+      routerLink="/products"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Shop
+    </a>
   </div>
 
   <div class="nav-icons">

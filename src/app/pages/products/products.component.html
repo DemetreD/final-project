@@ -1,38 +1,89 @@
-<!-- <section class="wrap">
-  <div class="tabs">
-    <button (click)="setTab('new')" [class.active]="activeTab === 'new'">
-      New Arrival
-    </button>
-    <button
-      (click)="setTab('bestseller')"
-      [class.active]="activeTab === 'bestseller'"
-    >
-      Bestseller
-    </button>
-    <button
-      (click)="setTab('featured')"
-      [class.active]="activeTab === 'featured'"
-    >
-      Featured Products
-    </button>
-  </div> -->
-
-<!-- <div class="grid">
-    <app-product-card
-      *ngFor="let p of filtered"
-      [product]="p"
-    ></app-product-card>
-  </div> -->
-
-<!-- <div class="cards">
-    <app-product-card *ngFor="let p of filtered" [product]="p">
-    </app-product-card>
-  </div> -->
-
-<!-- <div class="cards">
-    <app-product-card
-      *ngFor="let p of filtered"
-      [product]="p"
-    ></app-product-card>
+<div class="page">
+  <div class="crumbs">
+    <span>Home</span> <span class="sep">›</span> <span>Catalog</span>
+    <span class="sep">›</span>
+    <b>Smartphones</b>
   </div>
-</section> -->
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="filter-block">
+        <div class="filter-title">
+          <b>Brand</b>
+          <span>⌃</span>
+        </div>
+
+        <input class="search" placeholder="Search" />
+
+        <label class="chk"
+          ><input type="checkbox" /> Apple <span>110</span></label
+        >
+        <label class="chk"
+          ><input type="checkbox" /> Samsung <span>125</span></label
+        >
+        <label class="chk"
+          ><input type="checkbox" /> Xiaomi <span>8</span></label
+        >
+        <label class="chk"
+          ><input type="checkbox" /> Poco <span>44</span></label
+        >
+        <label class="chk"
+          ><input type="checkbox" /> OPPO <span>36</span></label
+        >
+        <label class="chk"
+          ><input type="checkbox" /> Honor <span>10</span></label
+        >
+        <label class="chk"
+          ><input type="checkbox" /> Motorola <span>34</span></label
+        >
+        <label class="chk"
+          ><input type="checkbox" /> Nokia <span>22</span></label
+        >
+        <label class="chk"
+          ><input type="checkbox" /> Realme <span>35</span></label
+        >
+      </div>
+
+      <div class="filter-collapse">Battery capacity <span>›</span></div>
+      <div class="filter-collapse">Screen type <span>›</span></div>
+      <div class="filter-collapse">Screen diagonal <span>›</span></div>
+      <div class="filter-collapse">Protection class <span>›</span></div>
+      <div class="filter-collapse">Built-in memory <span>›</span></div>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+      <div class="topbar">
+        <div class="count">
+          Selected Products: <b>{{ products.length }}</b>
+        </div>
+
+        <div class="sort">
+          <select>
+            <option>By rating</option>
+            <option>Price: Low → High</option>
+            <option>Price: High → Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid">
+        <app-product-card
+          *ngFor="let p of products"
+          [product]="p"
+        ></app-product-card>
+      </div>
+
+      <div class="pagination">
+        <button class="pg">‹</button>
+        <button class="pg active">1</button>
+        <button class="pg">2</button>
+        <button class="pg">3</button>
+        <span class="dots">…</span>
+        <button class="pg">12</button>
+        <button class="pg">›</button>
+      </div>
+    </main>
+  </div>
+</div>
