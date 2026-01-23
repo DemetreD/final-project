@@ -1,15 +1,12 @@
 <nav class="navbar container">
-  <!-- LEFT: logo -->
   <div class="nav-left">
     <a routerLink="/" class="logo">cyber</a>
   </div>
 
-  <!-- SEARCH -->
   <div class="nav-search">
     <input type="text" placeholder="Search" />
   </div>
 
-  <!-- LINKS -->
   <div class="nav-links">
     <a
       routerLink="/"
@@ -22,10 +19,16 @@
     <a routerLink="/blog" routerLinkActive="active">Blog</a>
   </div>
 
-  <!-- ICONS -->
   <div class="nav-icons">
-    <span>❤️</span>
-    <a routerLink="/cart">🛒</a>
-    <a routerLink="/login">👤</a>
+    <a routerLink="/cart"><img src="/assets/cart.png" alt="" /></a>
   </div>
+
+  <ng-container *ngIf="user$ | async as u; else guest">
+    <span class="user">Hi, {{ u.fullName }} ({{ u.role }})</span>
+    <button type="button" class="logout" (click)="logout()">Logout</button>
+  </ng-container>
+
+  <ng-template #guest>
+    <a routerLink="/login"><img src="/assets/user.png" alt="" /></a>
+  </ng-template>
 </nav>

@@ -1,1 +1,38 @@
-<p>register works!</p>
+<div class="wrap">
+  <h1>Create account</h1>
+
+  <p class="err" *ngIf="error">{{ error }}</p>
+  <p class="ok" *ngIf="success">{{ success }}</p>
+
+  <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+    <label>
+      Full name
+      <input formControlName="fullName" />
+      <small
+        *ngIf="form.controls.fullName.touched && form.controls.fullName.invalid"
+        >Required</small
+      >
+    </label>
+
+    <label>
+      Email
+      <input formControlName="email" />
+      <small *ngIf="form.controls.email.touched && form.controls.email.invalid"
+        >Valid email required</small
+      >
+    </label>
+
+    <label>
+      Password
+      <input type="password" formControlName="password" />
+      <small
+        *ngIf="form.controls.password.touched && form.controls.password.invalid"
+        >Min 6 chars</small
+      >
+    </label>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <p class="muted">Already have an account? <a routerLink="/login">Login</a></p>
+</div>

@@ -31,3 +31,15 @@
 .active {
   font-weight: 600;
 }
+
+.user {
+  margin-left: 12px;
+  font-weight: 600;
+}
+.logout {
+  margin-left: 12px;
+  padding: 8px 10px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
