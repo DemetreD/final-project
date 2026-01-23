@@ -1,1 +1,8 @@
-<p>feature-tiles works!</p>
+<section class="tiles">
+  <div class="tile" *ngFor="let t of tiles" [class.dark]="t.dark">
+    <img class="img" [src]="t.image" [alt]="t.title" />
+    <h3>{{ t.title }}</h3>
+    <p>{{ t.desc }}</p>
+    <a class="btn" [routerLink]="t.link">Shop Now</a>
+  </div>
+</section>

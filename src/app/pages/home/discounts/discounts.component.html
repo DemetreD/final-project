@@ -1,1 +1,7 @@
-<p>discounts works!</p>
+<section class="discounts">
+  <h2>Discounts up to -50%</h2>
+
+  <div class="grid">
+    <app-product-card *ngFor="let p of items" [product]="p"></app-product-card>
+  </div>
+</section>
