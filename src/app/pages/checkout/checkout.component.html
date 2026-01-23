@@ -1,1 +1,81 @@
-<p>checkout works!</p>
+<div class="wrap">
+  <h1>Checkout</h1>
+
+  <!-- SUCCESS -->
+  <div *ngIf="success" class="success">
+    ✅ Purchase completed successfully!
+    <div class="mt">
+      <a routerLink="/">Continue shopping</a>
+    </div>
+  </div>
+
+  <!-- FORM + SUMMARY -->
+  <div *ngIf="!success" class="checkout-grid">
+    <!-- LEFT: form -->
+    <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+      <label>
+        Full name
+        <input formControlName="fullName" />
+        <small
+          *ngIf="
+            form.controls.fullName.touched && form.controls.fullName.invalid
+          "
+        >
+          Name is required
+        </small>
+      </label>
+
+      <label>
+        Phone
+        <input formControlName="phone" />
+        <small
+          *ngIf="form.controls.phone.touched && form.controls.phone.invalid"
+        >
+          Phone is required
+        </small>
+      </label>
+
+      <label>
+        Address
+        <input formControlName="address" />
+        <small
+          *ngIf="form.controls.address.touched && form.controls.address.invalid"
+        >
+          Address is required
+        </small>
+      </label>
+
+      <label>
+        City
+        <input formControlName="city" />
+        <small *ngIf="form.controls.city.touched && form.controls.city.invalid">
+          City is required
+        </small>
+      </label>
+
+      <button type="submit">Place order</button>
+    </form>
+
+    <!-- RIGHT: summary -->
+    <div class="summary">
+      <h3>Order Summary</h3>
+
+      <div *ngIf="items$ | async as items">
+        <div class="row" *ngFor="let item of items">
+          <div>
+            <b>{{ item.product.title }}</b>
+            <div class="muted">Qty: {{ item.qty }}</div>
+          </div>
+          <div>${{ (item.product.price * item.qty).toFixed(2) }}</div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="total">
+          <span>Total</span>
+          <span>${{ total.toFixed(2) }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
